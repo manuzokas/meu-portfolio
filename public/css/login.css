@@ -1,0 +1,222 @@
+/* Estilo da Tela de Login */
+body {
+    background: linear-gradient(to bottom, #000000, #006400);
+    color: #ffffff;
+    font-family: 'Fira Code', monospace;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    /* Garante que a tela de login esteja acima de outros elementos */
+}
+
+.login-form {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 10px;
+    /* Borda arredondada */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.733);
+    /* Sombra suave */
+    text-align: center;
+}
+
+.login-form h2 {
+    color: #d1ddcc;
+    /* Cor base do texto */
+    text-shadow:
+        0 0 5px #3ea913,
+        /* Sombra interna próxima */
+        0 0 10px #163a07,
+        /* Sombra externa próxima */
+        0 0 20px #3ea913,
+        /* Sombra um pouco mais distante */
+        0 0 30px #7fff00,
+        /* Sombra verde neon */
+        0 0 40px #7fff00,
+        /* Sombra verde neon mais distante */
+        0 0 50px #7fff00,
+        /* Sombra verde neon ainda mais distante */
+        0 0 60px #7fff00;
+    /* Sombra verde neon mais distante */
+    animation: pulse-neon 1.5s infinite;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px 2px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fundo translúcido */
+    border: 1px solid #4fff09;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+    /* Transição suave */
+}
+
+.login-form input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Fundo translúcido quando focado */
+    border-color: #7fff00;
+    /* Cor da borda quando focado */
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #09ff11;
+    border: 2px solid #00ff00;
+    /* Borda verde */
+    box-shadow: 0 0 10px #00ff00;
+    /* Sombra verde */
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    /* Transição suave */
+}
+
+.login-form button:hover {
+    background-color: #377620;
+    /* Cor do botão ao passar o mouse */
+}
+
+#particles-login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #133311;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Estilo para mensagem de erro */
+.error-message {
+    color: rgb(244, 212, 212);
+    /* Cor base do texto */
+    text-shadow:
+        0 0 5px red,
+        0 0 10px red,
+        0 0 20px red,
+        0 0 30px #ff4d4d,
+        0 0 40px #ff4d4d,
+        0 0 50px #ff4d4d,
+        0 0 60px #ff4d4d;
+    /* Efeito neon */
+    margin-top: 10px;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+    /* Animação pulsante */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse-neon {
+    0% {
+        text-shadow:
+            0 0 5px #3ea913,
+            0 0 10px #030801,
+            0 0 20px #3ea913,
+            0 0 30px #7fff00,
+            0 0 40px #7fff00,
+            0 0 50px #7fff00,
+            0 0 60px #7fff00;
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px #7fff00,
+            0 0 20px #7fff00,
+            0 0 30px #7fff00,
+            0 0 40px #7fff00,
+            0 0 50px #7fff00,
+            0 0 60px #7fff00,
+            0 0 70px #7fff00;
+    }
+
+    100% {
+        text-shadow:
+            0 0 5px #3ea913,
+            0 0 10px #163a07,
+            0 0 20px #3ea913,
+            0 0 30px #7fff00,
+            0 0 40px #7fff00,
+            0 0 50px #7fff00,
+            0 0 60px #7fff00;
+    }
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #133311;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* personalizaçao do botao */
+
+#guest-login-button {
+    background-color: #45f100;
+    /* Verde */
+    color: #000000;
+    /* Preto */
+    border: 2px solid #00ff00;
+        /* Borda verde */
+    box-shadow: 0 0 10px #00ff00;
+        /* Sombra verde */
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    width: auto;
+    transition: background-color 0.3s ease;
+    animation: blink 1s infinite alternate; /* animação piscante */
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+#guest-login-button:hover {
+    background-color: #009900;
+    /* Verde mais escuro no hover */
+}

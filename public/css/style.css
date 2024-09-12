@@ -1,0 +1,213 @@
+/* /public/css/style.css */
+body {
+    background: linear-gradient(to bottom, #000000, #006400);
+    color: #ffffff;
+    font-family: 'Fira Code', monospace;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.terminal {
+    background-color: #121212;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00ff00;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding: 25px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.typed-text {
+    white-space: pre;
+    font-family: 'Fira Code', monospace;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* css responsavel pela personalização do manuzokas:*/
+.terminal-prompt {
+    color: #4fff09;
+    font-weight: bold;
+}
+
+/* css responsavel pela personalização das minhas boas-vindas personalizada minhas strings:*/
+#typed-output {
+    color: #baf7aa;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    line-height: 2;
+    
+}
+
+/* Estilo para o typed-output de apresentação */
+.presentation-output {
+    font-family: 'Fira Code', monospace;
+    /* Substitua com a fonte desejada */
+    font-size: 20px;
+    /* Ajuste o tamanho da fonte conforme necessário */
+    color: #ff0000;
+    /* Escolha a cor da fonte */
+    /* Adicione outras propriedades de estilo conforme necessário */
+}
+
+/* Estilo para o output de resposta aos comandos */
+.command-output {
+    font-family: 'Fira Code', monospace;
+    font-size: 15px;
+    color: #968b58;
+    line-height: 3;
+    /* Ajuste o espaçamento entre linhas conforme necessário */
+    /* Adicione outras propriedades de estilo conforme necessário */
+}
+
+.typed-cursor {
+    display: none;
+}
+
+.terminal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(to bottom,
+            transparent,
+            transparent 1px,
+            rgba(255, 255, 255, 0.05) 1px,
+            rgba(255, 255, 255, 0.05) 2px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #133311;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#command-input {
+    visibility: visible;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    outline: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeInAnimation 1s forwards;
+}
+
+.visible {
+    opacity: 1;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.terminal-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 16px;
+    background-color: #8ec07c;
+    margin-left: 5px;
+    animation: blink 1s step-end infinite;
+}
+
+.command-hover:hover {
+    font-weight: bold;
+    /* Deixa o texto em negrito */
+    color: #0f0e0e;
+    /* Cor do texto quando o mouse está em cima */
+    background-color: #15f609;
+    /* Cor de fundo quando o mouse está em cima */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+/* personalizando minha aba de skill para quando passar o mouse ela se destacar */
+.skill-item:hover {
+    font-weight: bold;
+    color: #0f0e0e;
+    /* Cor do texto quando o mouse está em cima */
+    background-color: #15f609;
+    /* Cor de fundo quando o mouse está em cima */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+/* personalizando minha aba de projects para quando passar o mouse ela se destacar */
+.project-item:hover {
+    font-weight: bold;
+    /* Deixa o texto em negrito */
+    color: #0f0e0e;
+    /* Cor do texto quando o mouse está em cima */
+    background-color: #15f609;
+    /* Cor de fundo quando o mouse está em cima */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+/* definindo como vermelho a cor da fonte para quando o comando nao ser reconhecido */
+.command-not-recognized {
+    color: red !important; /* o !important assegura a aplicação de cor independentemente de outras regras */
+    font-weight: bold;
+}
+
+/* definindo a camada responsavel pela personalizacao da navegacao com as setas (pra cima e pra baixo) do teclado */
+.active {
+    background-color: #100f0f;
+    /* Muda a cor de fundo do item selecionado */
+    color: #a6ff00;
+    font-weight: bold;
+}
+
