@@ -1,18 +1,19 @@
 import { typedManager } from './modules/typedManager.js';
 import { commandManager } from './modules/commandManager.js';
 import { particlesConfig } from './particlesConfig.js';
-import { addActiveClass, createCommandItem } from './modules/helpers.js'; // Importando funções auxiliares
 
-let isFadeInComplete = false; // Declarando a variável
+let isFadeInComplete = false; // Adicione esta variável
 
 document.addEventListener('DOMContentLoaded', () => {
+  particlesJS('particles-js', particlesConfig);
+
   typedManager.initTyped();
 
   const commandInput = document.getElementById('command-input');
   commandInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       typedManager.stopTyped();
-      commandManager.executeCommand(event.target.value); // Atualizado para usar executeCommand
+      commandManager.executeCommand(event.target.value);
       event.target.value = '';
       event.preventDefault();
     }
@@ -22,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const commandItems = typedOutput.getElementsByClassName('command-item');
     let index = Array.from(commandItems).findIndex(item => item.classList.contains('active'));
 
-    // Adicionando a funcionalidade de controlar as seções utilizando as setas
     if (event.key === 'ArrowUp') {
       if (index > 0) {
         commandItems[index].classList.remove('active');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   commandInput.addEventListener('animationend', () => {
     if (!isFadeInComplete) {
       commandInput.focus();
-      isFadeInComplete = true; // Atualiza a flag após o foco
+      isFadeInComplete = true;
     }
   });
 });
