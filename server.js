@@ -1,17 +1,18 @@
 const express = require('express');
 const http = require('http');
 const socketio = require('socket.io');
+const path = require('path');
 
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-// Servir arquivos estáticos
-app.use(express.static('public'));
+// Servir arquivos estáticos da pasta public
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Rota principal
+// Rota principal para enviar o index.html
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html');
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 // Configuração do Socket.io
