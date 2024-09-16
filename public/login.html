@@ -17,6 +17,7 @@
             <h2>Login</h2>
 
             <input type="text" id="username" placeholder="Usuário" required>
+
             <input type="password" id="password" placeholder="Senha" required>
             <button type="submit">Entrar</button>
             <p id="login-error" class="error-message"></p>
@@ -28,16 +29,7 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <!-- Seu código JavaScript personalizado -->
     <script type="module" src="js/login.mjs"></script>
-
-    <!-- Script para redirecionar após login -->
-    <script>
-        document.getElementById('login-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-            // Aqui você pode adicionar sua lógica de autenticação
-            // Para exemplo, vamos apenas redirecionar
-            window.location.href = '/index.html';
-        });
-    </script>
+    <!-- Substitua pelo caminho correto para o seu arquivo login.mjs -->
 </body>
 
 </html>
