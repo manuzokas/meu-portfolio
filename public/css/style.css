@@ -211,3 +211,58 @@ body {
     font-weight: bold;
 }
 
+.error-item {
+    color: red;
+    font-weight: bold;
+}
+
+.command-description {
+    color: rgb(246, 248, 255);
+    margin-bottom: 5px;
+    font-size: 0.8em;
+    /* Ajuste o valor conforme necessário */
+}
+
+.github-link {
+    color: #ffbf00;
+    /* Cor do link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+.github-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* Estilos para o LinkedIn */
+
+.linkedin-description {
+    color: rgb(246, 248, 255);
+    margin-bottom: 5px;
+    font-size: 0.8em;
+}
+
+.linkedin-link {
+    color: #0077b5;
+    /* Cor azul do LinkedIn */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.linkedin-link:hover {
+    text-decoration: underline;
+}
+
+.linkedin-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
