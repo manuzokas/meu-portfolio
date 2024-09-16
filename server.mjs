@@ -1,6 +1,6 @@
 import express from 'express';
 import http from 'http';
-import socketio from 'socket.io';
+import { Server as SocketIO } from 'socket.io';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server);
+const io = new SocketIO(server);
 
 // Servir arquivos estáticos da pasta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
