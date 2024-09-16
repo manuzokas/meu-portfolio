@@ -1,13 +1,18 @@
-const express = require('express');
-const http = require('http');
-const socketio = require('socket.io');
-const path = require('path');
+import express from 'express';
+import http from 'http';
+import socketio from 'socket.io';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Definir __dirname usando import.meta.url
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-// Servir arquivos estáticos da pasta public
+// Servir arquivos estáticos da pasta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Rota principal para enviar o index.html
