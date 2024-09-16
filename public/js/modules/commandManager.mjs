@@ -1,4 +1,4 @@
-import { addActiveClass, createCommandItem } from './helpers.js';
+import { addActiveClass, createCommandItem } from './helpers.mjs';
 
 const TYPING_SPEED = 50; // Velocidade de digitação em milissegundos
 

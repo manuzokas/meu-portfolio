@@ -1,4 +1,4 @@
-import { particlesConfig } from './particlesConfig.js';
+import { particlesConfig } from './particlesConfig.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
   particlesJS('particles-js', particlesConfig);//inicializando as particles

@@ -1,6 +1,6 @@
-import { typedManager } from './modules/typedManager.js';
-import { commandManager } from './modules/commandManager.js';
-import { particlesConfig } from './particlesConfig.js';
+import { typedManager } from './modules/typedManager.mjs';
+import { commandManager } from './modules/commandManager.mjs';
+import { particlesConfig } from './particlesConfig.mjs';
 
 let isFadeInComplete = false; // Adicione esta variável
 
